@@ -37,7 +37,7 @@ describe('Checking out ', () => {
 describe('Logout user ', () => {
     it ('allows a user to logout', async() => {
         await loginPage.click5()
-        await 
+        await LoginPage.btnsubmit6.waitForClickable ({setTimeout: 200})
         await loginPage.click6()
         await expect(loginPage.inputUsername).toBeExisting()
     })
