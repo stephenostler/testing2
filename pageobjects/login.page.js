@@ -12,7 +12,7 @@ class LoginPage extends Page {
         return $('#password');
     }
 
-    get btnSubmit () {
+    get loginBtn () {
         return $('#login-button');
     }
 
@@ -20,13 +20,11 @@ class LoginPage extends Page {
         return $('.app_logo')
    }
 
-   get badlogin(){
-        return $('[data-test="error"]')
-   }
+   
     async login (username, password) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+        await this.loginBtn.click();
     }
 
     
