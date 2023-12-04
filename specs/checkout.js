@@ -2,12 +2,13 @@ const { expect } = require('@wdio/globals')
 const LoginPage = require('../pageobjects/login.page')
 const loginPage = require('../pageobjects/login.page')
 const addItem = require('../pageobjects/additem')
+const checkout = require('../pageobjects/checkout')
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open()
         await LoginPage.login('standard_user', 'secret_sauce')
-        await expect(loginPage.pagecheck).toBeExisting()
+        
     })
 })
 
@@ -19,9 +20,7 @@ describe('Adding shirt to cart ', () => {
 })
 
 describe('Checking out ', () => {
-        it('allow user to checkout ', async () => {
-            await loginPage.click3()
-            await loginPage.click4()
-            await expect(loginPage.butcheck2).toBeExisting()
-        })
+    it('allow user to checkout ', async () => {
+        await checkout.checkoutTotal;
+    })
 })

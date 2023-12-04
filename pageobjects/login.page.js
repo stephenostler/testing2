@@ -39,25 +39,25 @@ class LoginPage extends Page {
     //     }
 
         
-    async click3 () {
-         await this.btnSubmit3.click();
-        }
+    // async click3 () {
+    //      await this.btnSubmit3.click();
+    //     }
 
    
 
-    get btnSubmit3 () {
-        return $('.shopping_cart_link');
-    }
+    // get btnSubmit3 () {
+    //     return $('.shopping_cart_link');
+    // }
 
-    get btnSubmit4 () {
-        return $('[data-test="checkout"]');
-    }
-    async click4 () {
-        await this.btnSubmit4.click();
-    }
-    get butcheck2(){
-        return $('#postal-code')
-    }
+    // get btnSubmit4 () {
+    //     return $('[data-test="checkout"]');
+    // }
+    // async click4 () {
+    //     await this.btnSubmit4.click();
+    // }
+    // get butcheck2(){
+    //     return $('#postal-code')
+    // }
 
     get btnsubmit5 (){
         return $('#react-burger-menu-btn')
