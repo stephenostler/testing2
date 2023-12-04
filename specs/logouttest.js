@@ -19,12 +19,12 @@ describe('Adding shirt to cart ', () => {
 })
 
 describe('Checking out ', () => {
-    it('allow user to checkout ', async () => {
+    it('allows a user to checkout ', async () => {
         await checkout.checkoutTotal;
     })
 })
 describe('Logout user ', () => {
     it ('allows a user to logout', async() => {
-        await logout.logoutFinal
+        await logout.logoutFinal;
     })
 })

@@ -21,10 +21,10 @@ class logout extends Page {
     }
 
     async logoutFinal(){
-        await this.burgerClick
-        await this.sideBtn.waitForClickable ({setTimeout: 200})
-        await this.logoutClick()
-        await expect(LoginPage.inputUsername).toBeExisting()
+        await this.burgerClick;
+        await this.sideBtn.waitForClickable ({setTimeout: 200});
+        await this.logoutClick();
+        await expect(LoginPage.inputUsername).toBeExisting();
     }
 }
 

@@ -13,7 +13,7 @@ class addItem extends Page {
  }
 
     get btnCheck(){
-        return $('#remove-sauce-labs-bolt-t-shirt')
+        return $('#remove-sauce-labs-bolt-t-shirt');
    }
 }
 

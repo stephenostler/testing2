@@ -17,7 +17,7 @@ class LoginPage extends Page {
     }
 
    get pagecheck (){
-        return $('.app_logo')
+        return $('.app_logo');
    }
 
    
@@ -28,48 +28,8 @@ class LoginPage extends Page {
         await expect(this.pagecheck).toBeExisting();
     }
 
-    
     open () {
         return super.open();
-    }
-
-
-    // async click () {
-    //      await this.btnSubmit.click();
-    //     }
-
-        
-    // async click3 () {
-    //      await this.btnSubmit3.click();
-    //     }
-
-   
-
-    // get btnSubmit3 () {
-    //     return $('.shopping_cart_link');
-    // }
-
-    // get btnSubmit4 () {
-    //     return $('[data-test="checkout"]');
-    // }
-    // async click4 () {
-    //     await this.btnSubmit4.click();
-    // }
-    // get butcheck2(){
-    //     return $('#postal-code')
-    // }
-
-    get btnsubmit5 (){
-        return $('#react-burger-menu-btn')
-    }
-    async click5 (){
-        await this.btnsubmit5.click();
-    }
-    get btnsubmit6(){
-        return $('#logout_sidebar_link')
-    }
-    async click6(){
-        await this.btnsubmit6.click();
     }
 }
 
