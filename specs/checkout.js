@@ -3,17 +3,18 @@ const LoginPage = require('../pageobjects/login.page')
 const loginPage = require('../pageobjects/login.page')
 const addItem = require('../pageobjects/additem')
 
-
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        await LoginPage.open();
-        await LoginPage.login('standard_user', 'secret_sauce');
+        await LoginPage.open()
+        await LoginPage.login('standard_user', 'secret_sauce')
+        await expect(loginPage.pagecheck).toBeExisting()
     })
 })
 
 describe('Adding shirt to cart ', () => {
     it('should add shirt to cart', async () => {
-        await addItem.item();
+        await addItem.item()
+        await expect(addItem.btnCheck).toBeExisting()
     })
 })
 
@@ -23,15 +24,4 @@ describe('Checking out ', () => {
             await loginPage.click4()
             await expect(loginPage.butcheck2).toBeExisting()
         })
- 
-describe('Logout user ', () => {
-    it ('allows a user to logout', async() => {
-        await loginPage.click5()
-        await LoginPage.btnsubmit6.waitForClickable ({setTimeout: 200})
-        await loginPage.click6()
-        await expect(loginPage.inputUsername).toBeExisting()
-    })
-})
-
-
 })

@@ -3,15 +3,18 @@ const Page = require('./page');
 
 class addItem extends Page {
     
-    get btnSubmit2 () {
+    get addBtn () {
         return $('#add-to-cart-sauce-labs-bolt-t-shirt');
    }
 
-//     async click2 () {
-//         await this.btnSubmit2.click();
-//  }
+    async item () {
+        await this.addBtn.click();
+        await expect (this.btnCheck).toBeExisting();
+ }
 
     get btnCheck(){
         return $('#remove-sauce-labs-bolt-t-shirt')
    }
 }
+
+module.exports = new addItem

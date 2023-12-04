@@ -25,6 +25,7 @@ class LoginPage extends Page {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.loginBtn.click();
+        await expect(this.pagecheck).toBeExisting();
     }
 
     
@@ -33,9 +34,9 @@ class LoginPage extends Page {
     }
 
 
-    async click () {
-         await this.btnSubmit.click();
-        }
+    // async click () {
+    //      await this.btnSubmit.click();
+    //     }
 
         
     async click3 () {
@@ -58,18 +59,6 @@ class LoginPage extends Page {
         return $('#postal-code')
     }
 
-   
-    get btnSubmit2 () {
-        return $('#add-to-cart-sauce-labs-bolt-t-shirt');
-       }
-
-    async click2 () {
-        await this.btnSubmit2.click();
-     }
-    get btnCheck(){
-        return $('#remove-sauce-labs-bolt-t-shirt')
-       }
-  
     get btnsubmit5 (){
         return $('#react-burger-menu-btn')
     }
